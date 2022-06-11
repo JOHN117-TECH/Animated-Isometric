@@ -5,6 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-commerce Landing Page</title>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/index.css" />
   </head>
   <body>
     <header class="header">
@@ -27,6 +39,20 @@
           </li>
         </ul>
       </nav>
+      <div class="fas fa-bars header__icon"></div>
     </header>
+    
+    <script>
+      $(document).ready(function () {
+        $(".fa-bars").click(function () {
+          $(this).toggleClass("fa-times");
+          $(".header__nav").slideToggle();
+        });
+      });
+      $(".header__nav").click(function () {
+        $(".fa-bars").removeClass("fa-times");
+        $(this).hide();
+      });
+    </script>
   </body>
 </html>
