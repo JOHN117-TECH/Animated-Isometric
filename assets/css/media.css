@@ -66,6 +66,10 @@
 }
 
 @media (max-width:450px) {
+    .home {
+        height: 100%;
+    }
+
     .home__content {
         align-items: flex-start;
     }
